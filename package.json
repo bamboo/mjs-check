@@ -1,0 +1,17 @@
+{
+  "name": "mjs-check",
+  "version": "0.0.1",
+  "description": "Checks metascript source file for compilation errors.",
+  "main": "mjs.js",
+  "author": "Rodrigo B. de Oliveira <rbo@acm.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-mjs": "0.0.7",
+    "hash-require": "0.0.4",
+    "masakari": "^0.1.0"
+  },
+  "dependencies": {
+    "mori": "^0.2.9"
+  }
+}
