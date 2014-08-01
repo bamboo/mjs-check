@@ -15,14 +15,21 @@ fun format-location {line, column} ->
   else
     ''
 
+fun log-error (file, location, message) ->
+  console.log
+    file + format-location location + ': ' + message
+
 fun check files ->
   var mjs = meta-script ()
-  files.for-each fun file ->
-    var compiler = mjs.compiler-from-file file
-    var ast = compiler.produce-ast ()
-    compiler.errors.for-each fun error ->
-      console.log
-        file + format-location error + ': ' + error.message
+  files.for-each fun file -> do!
+    try
+      var compiler = mjs.compiler-from-file file
+      var ast = compiler.produce-ast ()
+      compiler.errors.for-each fun error ->
+        log-error (file, error, error.message)
+    catch var e
+      log-error (file, {line: 1, column: 1}, (e.message || e.to-string ()))
+
   0
 
 #external module.exports = check
