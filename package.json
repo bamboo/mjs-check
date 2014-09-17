@@ -12,6 +12,7 @@
     "masakari": "^0.1.0"
   },
   "dependencies": {
+    "meta-script": "0.0.45",
     "mori": "^0.2.9"
   }
 }
