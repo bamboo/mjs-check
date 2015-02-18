@@ -10,7 +10,7 @@
 fun format-location {line, column} ->
   if line
     if column
-      '(' + line + ',' + column + ')'
+     '(' + line + ',' + column + ')'
     else
       '(' + line + ')'
   else
@@ -26,7 +26,7 @@ fun check-file-as (filename, file, mjs) -> do!
       fs.read-file-sync (file, {encoding: 'utf8'})
       filename
     var ast = compiler.produce-ast ()
-    compiler.errors.for-each fun error ->
+    compiler.errors.for-each error ->
       log-error (file, error, error.message)
   catch var e
     log-error (file, {line: 1, column: 1}, (e.message || e.to-string ()))
