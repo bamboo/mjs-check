@@ -1,6 +1,6 @@
 {
   "name": "mjs-check",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Checks metascript source file for compilation errors.",
   "main": "mjs.js",
   "author": "Rodrigo B. de Oliveira <rbo@acm.org>",
