@@ -7,12 +7,12 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.6",
-    "gulp-mjs": "0.0.7",
+    "gulp-mjs": "0.0.10",
     "hash-require": "0.0.4",
     "masakari": "^0.1.0"
   },
   "dependencies": {
-    "meta-script": "0.0.45",
+    "meta-script": "0.0.47",
     "mori": "^0.2.9"
   }
 }
